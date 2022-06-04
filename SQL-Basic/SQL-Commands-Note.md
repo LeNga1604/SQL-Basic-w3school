@@ -1,0 +1,1 @@
+Lấy ra toàn bộ thông tin trong bảng khách hàng: SELECT * FROM Customers;
