@@ -17,7 +17,12 @@ SELECT CustomerName
 FROM Customers 
 WHERE CustomerName LIKE 'Bo%';
 
-Lọc ra những khách hàng có tên chứa kí tự "Bo" : 
+Lọc ra những khách hàng có tên chứa kí tự 'Bo' : 
 Select CustomerName 
 from Customers 
 where CustomerName like '%Bo%';
+
+Lấy ra tên khách hàng chưa đăng ký địa chỉ : 
+SELECT * 
+FROM Customers 
+WHERE Address IS Null;
