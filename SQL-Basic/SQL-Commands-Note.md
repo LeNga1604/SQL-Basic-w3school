@@ -26,3 +26,8 @@ Lấy ra tên khách hàng chưa đăng ký địa chỉ :
 SELECT * 
 FROM Customers 
 WHERE Address IS Null;
+
+Lấy ra 3 khách hàng thuộc 'Germany' :
+SELECT CustomerName 
+FROM Customers 
+where Country = 'Germany' LIMIT 3;
