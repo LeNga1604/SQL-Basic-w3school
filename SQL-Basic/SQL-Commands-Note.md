@@ -31,3 +31,7 @@ Lấy ra 3 khách hàng thuộc 'Germany' :
 SELECT CustomerName 
 FROM Customers 
 where Country = 'Germany' LIMIT 3;
+
+Lấy ra khách hàng thuộc 'Germany' hoặc 'Spain' : 
+SELECT * FROM Customers 
+where Country = 'Germany' or Country = 'Spain';
