@@ -35,3 +35,7 @@ where Country = 'Germany' LIMIT 3;
 Lấy ra khách hàng thuộc 'Germany' hoặc 'Spain' : 
 SELECT * FROM Customers 
 where Country = 'Germany' or Country = 'Spain';
+
+Lấy ra những khách hàng thuộc Germany hoặc France hoặc UK :
+SELECT * FROM Customers
+ where Country = 'Germany' or Country =  'France'or Country= 'UK';
