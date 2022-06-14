@@ -39,3 +39,8 @@ where Country = 'Germany' or Country = 'Spain';
 Lấy ra những khách hàng thuộc Germany hoặc France hoặc UK :
 SELECT * FROM Customers
  where Country = 'Germany' or Country =  'France'or Country= 'UK';
+
+Lấy ra những khách hàng thuộc Germany hoặc France hoặc UK :
+SELECT * FROM Customers
+ WHERE Country = 'Germany' OR Country = 'UK' OR Country = 'France' 
+ ORDER BY Country;
