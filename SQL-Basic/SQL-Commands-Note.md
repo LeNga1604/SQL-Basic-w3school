@@ -44,3 +44,6 @@ Lấy ra những khách hàng thuộc Germany hoặc France hoặc UK :
 SELECT * FROM Customers
  WHERE Country = 'Germany' OR Country = 'UK' OR Country = 'France' 
  ORDER BY Country;
+
+ Sắp xếp khách hàng có Country tăng dần, tên khách hàng giảm dần theo thứ tự bảng chữ cái :
+ SELECT * FROM Customers ORDER BY Country ASC, CustomerName DESC;
