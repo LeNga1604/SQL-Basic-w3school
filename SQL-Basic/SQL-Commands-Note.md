@@ -52,3 +52,13 @@ SELECT * FROM Customers
  Xóa khách hàng có tên 'Alfreds Futterkiste' ra khỏi bảng khách hàng trong CSDL :
 DELETE FROM Customers 
 WHERE CustomerName = 'Alfreds Futterkiste';
+
+Thêm 1 khác hàng mới vào bảng với thông tin như sau: 
+CustomerName = 'Cardinal', 
+ContactName = 'Tom B. Erichsen'
+Address = 'Skagen 21'
+City = 'Stavanger'
+PostalCode = '4006'
+Country = 'Norway' : INSERT INTO Customers 
+(CustomerName,ContactName,Address,City,PostalCode,Country) 
+VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
