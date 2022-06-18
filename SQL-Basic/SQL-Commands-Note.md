@@ -62,3 +62,7 @@ PostalCode = '4006'
 Country = 'Norway' : INSERT INTO Customers 
 (CustomerName,ContactName,Address,City,PostalCode,Country) 
 VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
+
+Cập nhật toàn bộ tên liên lạc = 'Juan' cho những khách hàng ở Mexico :
+ UPDATE Customers SET 
+ ContactName = 'Juan' WHERE Country = 'Mexico';
