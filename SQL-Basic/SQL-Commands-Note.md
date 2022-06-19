@@ -64,5 +64,8 @@ Country = 'Norway' : INSERT INTO Customers
 VALUES ('Cardinal', 'Tom B. Erichsen', 'Skagen 21', 'Stavanger', '4006', 'Norway');
 
 Cập nhật toàn bộ tên liên lạc = 'Juan' cho những khách hàng ở Mexico :
- UPDATE Customers SET 
- ContactName = 'Juan' WHERE Country = 'Mexico';
+UPDATE Customers SET 
+ContactName = 'Juan' WHERE Country = 'Mexico';
+
+Đếm số lượng sản phẩm có trong bảng :
+SELECT COUNT (ProductName) FROM Products ;
