@@ -68,4 +68,8 @@ UPDATE Customers SET
 ContactName = 'Juan' WHERE Country = 'Mexico';
 
 Đếm số lượng sản phẩm có trong bảng :
-SELECT COUNT (ProductName) FROM Products ;
+SELECT COUNT (ProductName) FROM Products;
+
+Đếm số lượng sản phẩm có giá nhỏ hơn 40 :
+SELECT COUNT (ProductName)
+ FROM Products WHERE Price < 40;
