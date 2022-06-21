@@ -73,3 +73,6 @@ SELECT COUNT (ProductName) FROM Products;
 Đếm số lượng sản phẩm có giá nhỏ hơn 40 :
 SELECT COUNT (ProductName)
  FROM Products WHERE Price < 40;
+
+ Lấy trung bình giá của sản phẩm :
+ SELECT AVG (Price) FROM Products;
