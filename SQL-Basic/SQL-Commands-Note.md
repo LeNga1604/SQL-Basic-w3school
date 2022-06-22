@@ -76,3 +76,6 @@ SELECT COUNT (ProductName)
 
  Lấy trung bình giá của sản phẩm :
  SELECT AVG (Price) FROM Products;
+
+ Cho biết giá sản phẩm cao nhất, giá sản phẩm thấp nhất :
+ SELECT MIN (Price), MAX (Price) FROM Products;
