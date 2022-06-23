@@ -79,3 +79,6 @@ SELECT COUNT (ProductName)
 
  Cho biết giá sản phẩm cao nhất, giá sản phẩm thấp nhất :
  SELECT MIN (Price), MAX (Price) FROM Products;
+
+ Lọc ra những sản phẩm có giá từ 40 đến 90 ( lấy những sản phẩm có giá = 40 và = 90) :
+ SELECT * FROM Products WHERE Price >= 40 AND Price <= 90;
