@@ -82,3 +82,8 @@ SELECT COUNT (ProductName)
 
  Lọc ra những sản phẩm có giá từ 40 đến 90 ( lấy những sản phẩm có giá = 40 và = 90) :
  SELECT * FROM Products WHERE Price >= 40 AND Price <= 90;
+
+ Lấy ra sản phẩm mà chưa từng được order :
+ SELECT Products.ProductName, Products.ProductID FROM Products 
+ JOIN OrderDetails ON Products. ProductID = OrderDetails.ProductID
+  WHERE Products. ProductID <> OrderDetails.ProductID;
