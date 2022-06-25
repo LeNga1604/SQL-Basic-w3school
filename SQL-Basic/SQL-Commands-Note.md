@@ -87,3 +87,8 @@ SELECT COUNT (ProductName)
  SELECT Products.ProductName, Products.ProductID FROM Products 
  JOIN OrderDetails ON Products. ProductID = OrderDetails.ProductID
   WHERE Products. ProductID <> OrderDetails.ProductID;
+
+  Lọc ra danh sách tên khách hàng, tên liên lạc của khách hàng và lưu vào 1 bảng mới :
+  CREATE TABLE NEWTABLE AS
+  SELECT CustomerName, ContactName
+   FROM CUSTOMERS;
