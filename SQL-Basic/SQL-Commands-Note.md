@@ -92,3 +92,8 @@ SELECT COUNT (ProductName)
   CREATE TABLE NEWTABLE AS
   SELECT CustomerName, ContactName
    FROM CUSTOMERS;
+
+   Lọc ra những khách hàng có quốc tịch Đức để lưu vào 1 bảng mới :
+   CREATE TABLE NEWTABLE2 AS
+    SELECT Country="Germany"
+    FROM Customers;
