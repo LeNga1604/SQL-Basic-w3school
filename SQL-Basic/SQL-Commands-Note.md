@@ -95,5 +95,12 @@ SELECT COUNT (ProductName)
 
    Lọc ra những khách hàng có quốc tịch Đức để lưu vào 1 bảng mới :
    CREATE TABLE NEWTABLE2 AS
-    SELECT Country="Germany"
+    SELECT Country='Germany'
     FROM Customers;
+
+    Lấy ra những quốc gia có trên 5 khách hàng và sắp xếp danh sách theo số lượng khách hàng giảm dần :
+    SELECT COUNT(CustomerID), Country
+FROM Customers
+GROUP BY Country
+HAVING COUNT(CustomerID) > 5
+ORDER BY COUNT(CustomerID) DESC;
