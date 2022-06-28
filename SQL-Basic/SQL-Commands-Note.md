@@ -100,7 +100,10 @@ SELECT COUNT (ProductName)
 
     Lấy ra những quốc gia có trên 5 khách hàng và sắp xếp danh sách theo số lượng khách hàng giảm dần :
     SELECT COUNT(CustomerID), Country
-FROM Customers
-GROUP BY Country
-HAVING COUNT(CustomerID) > 5
-ORDER BY COUNT(CustomerID) DESC;
+    FROM Customers
+   GROUP BY Country
+   HAVING COUNT(CustomerID) > 5
+   ORDER BY COUNT(CustomerID) DESC;
+
+   Lấy ra tên sản phẩm có giá cao nhất trong bảng :
+   SELECT MAX(Price) AS MaxPrice, ProductName FROM Products ORDER BY ProductName;
