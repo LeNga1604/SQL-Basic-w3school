@@ -107,3 +107,7 @@ SELECT COUNT (ProductName)
 
    Lấy ra tên sản phẩm có giá cao nhất trong bảng :
    SELECT MAX(Price) AS MaxPrice, ProductName FROM Products ORDER BY ProductName;
+
+   Lọc ra những sản phẩm thuộc nhà cung cấp 'Exotic Liquid' :SELECT * FROM Products 
+   JOIN Suppliers ON Products.SupplierID = Suppliers.SupplierID 
+   WHERE Suppliers.SupplierName = 'Exotic Liquid';
