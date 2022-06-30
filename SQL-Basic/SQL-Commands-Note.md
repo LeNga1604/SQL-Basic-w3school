@@ -111,3 +111,7 @@ SELECT COUNT (ProductName)
    Lọc ra những sản phẩm thuộc nhà cung cấp 'Exotic Liquid' :SELECT * FROM Products 
    JOIN Suppliers ON Products.SupplierID = Suppliers.SupplierID 
    WHERE Suppliers.SupplierName = 'Exotic Liquid';
+
+   Lấy ra danh sách city ở khách hàng và nhà cung cấp rồi sắp xếp theo thứ tự tăng dần :
+   SELECT Customers.City, Suppliers.City FROM Customers, 
+   Suppliers ORDER BY Customers.City, Suppliers.City DESC;
