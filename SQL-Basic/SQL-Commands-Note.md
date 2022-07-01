@@ -115,3 +115,8 @@ SELECT COUNT (ProductName)
    Lấy ra danh sách city ở khách hàng và nhà cung cấp rồi sắp xếp theo thứ tự tăng dần :
    SELECT Customers.City, Suppliers.City FROM Customers, 
    Suppliers ORDER BY Customers.City, Suppliers.City DESC;
+
+Đếm số lượng sản phẩm của mỗi nhà cung cấp :
+SELECT COUNT(ProductName), SupplierID
+ FROM Products WHERE SupplierID IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) 
+ GROUP BY SupplierID;
