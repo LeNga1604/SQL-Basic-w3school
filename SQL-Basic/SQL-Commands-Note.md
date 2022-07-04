@@ -120,3 +120,6 @@ SELECT COUNT (ProductName)
 SELECT COUNT(ProductName), SupplierID
  FROM Products WHERE SupplierID IN (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29) 
  GROUP BY SupplierID;
+
+ Đếm số lượng sản phẩm được order theo productid và sắp xếp theo số lượng sản phẩm giảm dần :
+ SELECT COUNT(ProductID) AS Total FROM [OrderDetails] GROUP BY ProductID ORDER BY Total DESC;
