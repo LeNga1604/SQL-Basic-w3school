@@ -123,3 +123,11 @@ SELECT COUNT(ProductName), SupplierID
 
  Đếm số lượng sản phẩm được order theo productid và sắp xếp theo số lượng sản phẩm giảm dần :
  SELECT COUNT(ProductID) AS Total FROM [OrderDetails] GROUP BY ProductID ORDER BY Total DESC;
+
+ Lấy ra những đơn hàng do shipper tên là 'United Package' ship mà có ngày order từ '01-01-1997':
+ SELECT Orders.OrderID, Orders.OrderDate 
+FROM Orders JOIN Shippers 
+ON Orders.ShipperID = Shippers.ShipperID 
+WHERE  ShipperName = 'United Package' 
+GROUP BY Orders.OrderDate 
+HAVING Orders.OrderDate > '1997-01-01';
