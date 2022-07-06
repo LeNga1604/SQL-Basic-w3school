@@ -131,3 +131,8 @@ ON Orders.ShipperID = Shippers.ShipperID
 WHERE  ShipperName = 'United Package' 
 GROUP BY Orders.OrderDate 
 HAVING Orders.OrderDate > '1997-01-01';
+
+Lấy ra danh sách tên nhà cung cấp mà có giá sản phẩm <20 :SELECT Suppliers.SupplierName, Products.Price 
+FROM Suppliers JOIN Products 
+ON Suppliers.SupplierID=Products.SupplierID 
+WHERE Products.Price <20;
