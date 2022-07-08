@@ -143,3 +143,8 @@ SELECT Suppliers.SupplierName, Products.Price
 FROM Suppliers JOIN Products 
 ON Suppliers.SupplierID=Products.SupplierID 
 WHERE Products.Price =22;
+
+Lấy ra tên khách hàng và mã order tương ứng :
+SELECT Customers.CustomerName, Orders.OrderID 
+FROM Customers JOIN Orders 
+ON Customers.CustomerID=Orders.CustomerID;
