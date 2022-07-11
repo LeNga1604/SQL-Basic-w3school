@@ -15,4 +15,4 @@ $ git config --global user.email johndoe@example.com
 
 3. Check my git settings
 $ git config --list
-$ git config --global --list
+$ git cfig --global --list

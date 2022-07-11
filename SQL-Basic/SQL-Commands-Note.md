@@ -148,3 +148,8 @@ Lấy ra tên khách hàng và mã order tương ứng :
 SELECT Customers.CustomerName, Orders.OrderID 
 FROM Customers JOIN Orders 
 ON Customers.CustomerID=Orders.CustomerID;
+
+Lấy ra toàn bộ danh sách họ tên nhân viên và mã đơn hàng họ đặt được (nếu có) :
+SELECT Employees.LastName, Employees.FirstName, Orders.OrderID 
+FROM Employees JOIN Orders 
+ON Employees.EmployeeID=Orders.EmployeeID;
