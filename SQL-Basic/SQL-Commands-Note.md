@@ -153,3 +153,9 @@ Lấy ra toàn bộ danh sách họ tên nhân viên và mã đơn hàng họ đ
 SELECT Employees.LastName, Employees.FirstName, Orders.OrderID 
 FROM Employees JOIN Orders 
 ON Employees.EmployeeID=Orders.EmployeeID;
+
+Lấy ra id sản phẩm (productid) được order với số lượng nhiều nhất. 
+Cho biết tên sản phẩm và số lượng sản phẩm đã được order nhiều nhất :
+SELECT MAX(Quantity), OrderDetails.ProductID, Products.ProductName 
+FROM OrderDetails JOIN Products 
+ON OrderDetails.ProductID=Products.ProductID;
