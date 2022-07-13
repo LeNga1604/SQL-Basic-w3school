@@ -159,3 +159,10 @@ Cho biết tên sản phẩm và số lượng sản phẩm đã được order 
 SELECT MAX(Quantity), OrderDetails.ProductID, Products.ProductName 
 FROM OrderDetails JOIN Products 
 ON OrderDetails.ProductID=Products.ProductID;
+
+Lấy ra id khách hàng order trên 6 đơn :
+SELECT Orders.CustomerID, OrderDetails. Quantity 
+FROM OrderDetails JOIN Orders 
+ON OrderDetails.OrderID=Orders.OrderID 
+WHERE OrderDetails.Quantity > 6 
+GROUP BY Orders.CustomerID;
