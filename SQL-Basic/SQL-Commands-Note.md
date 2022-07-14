@@ -166,3 +166,11 @@ FROM OrderDetails JOIN Orders
 ON OrderDetails.OrderID=Orders.OrderID 
 WHERE OrderDetails.Quantity > 6 
 GROUP BY Orders.CustomerID;
+
+Lấy ra những đơn hàng do shipper tên là 'United Package' ship mà có ngày order từ '01-01-1997' mà có tên khách hàng là 'Laura' :
+FROM Orders 
+INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID 
+INNER JOIN Customers ON Customers.CustomerID = Orders.CustomerID 
+WHERE  ShipperName = 'United Package' 
+GROUP BY Orders.OrderDate 
+HAVING Orders.OrderDate > '1997-01-01';
