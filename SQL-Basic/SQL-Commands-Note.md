@@ -174,3 +174,7 @@ INNER JOIN Customers ON Customers.CustomerID = Orders.CustomerID
 WHERE  ShipperName = 'United Package' 
 GROUP BY Orders.OrderDate 
 HAVING Orders.OrderDate > '1997-01-01';
+
+Đếm số lượng đơn hàng của mỗi shipper :
+SELECT ShipperID, COUNT(OrderID) 
+FROM Orders GROUP BY ShipperID;
