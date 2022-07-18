@@ -178,3 +178,10 @@ HAVING Orders.OrderDate > '1997-01-01';
 Đếm số lượng đơn hàng của mỗi shipper :
 SELECT ShipperID, COUNT(OrderID) 
 FROM Orders GROUP BY ShipperID;
+
+Lấy ra danh sách nhân viên có trên 10 đơn hàng :
+SELECT Employees.LastName, COUNT(Orders.OrderID) AS NumberOfOrders
+FROM (Orders
+INNER JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID)
+GROUP BY LastName
+HAVING COUNT(Orders.OrderID) > 10;
