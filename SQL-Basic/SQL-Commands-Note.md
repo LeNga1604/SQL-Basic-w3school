@@ -185,3 +185,11 @@ FROM (Orders
 INNER JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID)
 GROUP BY LastName
 HAVING COUNT(Orders.OrderID) > 10;
+
+Lấy ra danh sách nhân viên có họ là 'Davolio' hoặc 'Fuller' mà có trên 25 đơn hàng :
+SELECT Employees.EmployeeID, Employees.LastName, Employees.FirstName, 
+OrderDetails.OrderID, OrderDetails.Quantity FROM Orders 
+INNER JOIN OrderDetails ON Orders.OrderID=OrderDetails
+.OrderID INNER JOIN Employees ON Employees.EmployeeID=Orders.EmployeeID 
+WHERE Orders.EmployeeID = 1 OR Orders.EmployeeID = 2 GROUP BY Orders.
+EmployeeID HAVING OrderDetails.Quantity > 25;
