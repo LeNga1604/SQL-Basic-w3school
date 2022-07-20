@@ -193,3 +193,9 @@ INNER JOIN OrderDetails ON Orders.OrderID=OrderDetails
 .OrderID INNER JOIN Employees ON Employees.EmployeeID=Orders.EmployeeID 
 WHERE Orders.EmployeeID = 1 OR Orders.EmployeeID = 2 GROUP BY Orders.
 EmployeeID HAVING OrderDetails.Quantity > 25;
+
+Lấy ra sản phẩm được cung cấp bởi nhà cung cấp tên Exotic Liquid' và có tên phân loại là 'Beverages' :
+SELECT Products.ProductName, Categories.CategoryID, Suppliers.SupplierID FROM Products 
+INNER JOIN Categories ON Products.CategoryID=Categories.CategoryID 
+INNER JOIN Suppliers ON Products.SupplierID=Suppliers.SupplierID 
+WHERE SupplierName='Exotic Liquid' AND CategoryName='Beverages';
