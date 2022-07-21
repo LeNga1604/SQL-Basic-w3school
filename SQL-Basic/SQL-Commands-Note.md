@@ -199,3 +199,15 @@ SELECT Products.ProductName, Categories.CategoryID, Suppliers.SupplierID FROM Pr
 INNER JOIN Categories ON Products.CategoryID=Categories.CategoryID 
 INNER JOIN Suppliers ON Products.SupplierID=Suppliers.SupplierID 
 WHERE SupplierName='Exotic Liquid' AND CategoryName='Beverages';
+
+Dựa vào số lượng sản phẩm trên 1 đơn đặt hàng, hiển thị các trường hợp: 
+- Nếu số lượng sp > 30 thì hiển thị 'The quantity is greater than 30'
+- Nếu số lương sp =30 thì hiển thị 'The quantity is 30'
+- Các trường hợp còn lại thì hiển thị 'The quantity is under 30' :
+SELECT OrderID, Quantity,
+CASE
+    WHEN Quantity > 30 THEN 'The quantity is greater than 30'
+    WHEN Quantity = 30 THEN 'The quantity is 30'
+    ELSE 'The quantity is under 30'
+END AS QuantityText
+FROM OrderDetails;
