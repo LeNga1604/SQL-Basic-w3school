@@ -211,3 +211,6 @@ CASE
     ELSE 'The quantity is under 30'
 END AS QuantityText
 FROM OrderDetails;
+
+Lấy danh sách tên khách hàng, thành phố, quốc gia của khách hàng và order by theo tên thành phố tăng dần (trường hợp tên thành phố null thì order by theo tên quốc gia tăng dần) :
+SELECT CustomerName, City, Country FROM Customers ORDER BY City ASC;
